@@ -4,7 +4,12 @@
         {
             "name": "base",
             "hidden": true,
-            "binaryDir": "${sourceDir}/build/${presetName}"
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_OSX_ARCHITECTURES": "x86_64;arm64",
+                "FETCHCONTENT_BASE_DIR": "${sourceDir}/external"
+            }
         },
         {
             "name": "debug",
